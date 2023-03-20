@@ -10,8 +10,8 @@
     program.parse();
 
     const opts = program.args;
-    if (!fs.existsSync(opts[0])) throw new Error('Invalid sound directory.');
-    if (!fs.existsSync(opts[1])) throw new Error('Invalid l4d2 sound directory.');
+    if (!fs.existsSync(opts[0])) throw new Error('Invalid sound directory. Try wrapping the directory in "" if you\'re sure it exists.');
+    if (!fs.existsSync(opts[1])) throw new Error('Invalid l4d2 sound directory. Try wrapping the directory in "" if you\'re sure it exists.');
     const files = fs.readdirSync(opts[0]);
     const filesdirs = {}
     let filesisDir = false;
